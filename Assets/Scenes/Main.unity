@@ -180,6 +180,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 694b8e5d9b16b484481983c11c5f8d6b, type: 3}
+--- !u!1 &496178736
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 496178738}
+  - component: {fileID: 496178737}
+  m_Layer: 0
+  m_Name: Entry
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &496178737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496178736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd782091f9e17549a3ced53721eb5d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosiveSpawner: {fileID: 560985484}
+  characterSpawner: {fileID: 575050195}
+--- !u!4 &496178738
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496178736}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -20.655691, y: -21.786364, z: 19.132614}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &560985483
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,7 +259,7 @@ MonoBehaviour:
   - {fileID: 2512680394705613362, guid: a29663859ca19df4cbb3fdd1cf4333a4, type: 3}
   - {fileID: 2966892443597888235, guid: e9a666eeeb54f9d4f8e2147bf39aa591, type: 3}
   - {fileID: 8428992026403227093, guid: 13005a5f3eabb2340970815496b097f1, type: 3}
-  spawnInterval: 2
+  spawnInterval: 1.5
 --- !u!4 &560985485
 Transform:
   m_ObjectHideFlags: 0
@@ -262,7 +307,7 @@ MonoBehaviour:
   spawnables:
   - {fileID: 1639493522629590310, guid: 106ca2c4e2bdc0643baf1eb99dc70eba, type: 3}
   - {fileID: 1639493522629590310, guid: 1d16840568491e54597ccf13a13e7608, type: 3}
-  spawnInterval: 2
+  spawnInterval: 1.5
 --- !u!4 &575050196
 Transform:
   m_ObjectHideFlags: 0

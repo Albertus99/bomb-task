@@ -26,7 +26,13 @@ public class HealthIndicator : MonoBehaviour
 
     private void OnTargetHealthChange(float hp)
     {
-        indicatorTransform.localScale = Vector3.one * Mathf.Lerp(0.2f, 0.5f, hp / targetHaveHealth.BaseHealth);
-        indicatorRenderer.material.SetColor(color, Color.Lerp(Color.red, Color.green, hp / targetHaveHealth.BaseHealth));
+        var t = hp / targetHaveHealth.BaseHealth;
+        indicatorTransform.localScale = Vector3.one * Mathf.Lerp(0.2f, 0.5f, t);
+
+
+        indicatorRenderer.material.SetColor(color,
+            t < 0.5f
+                ? Color.Lerp(Color.red, Color.yellow, t * 2)
+                : Color.Lerp(Color.yellow, Color.green, (t - 0.5f) * 2));
     }
 }

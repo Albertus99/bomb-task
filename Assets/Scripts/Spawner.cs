@@ -9,12 +9,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] private Vector3 spawnExtents;
     [SerializeField] private GameObject[] spawnables;
     [SerializeField] private float spawnInterval = 2;
-
-    private void Start()
-    {
-        Setup();
-    }
-
+    
     public void Setup()
     {
         StartCoroutine(Spawning());
