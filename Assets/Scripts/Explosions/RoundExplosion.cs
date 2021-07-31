@@ -19,7 +19,7 @@ public class RoundExplosion : Explosion
                 Debug.DrawLine(origin, hit.point, Color.red, 3);
                 if (hit.collider.TryGetComponent<IDamagable>(out var damagable))
                 {
-                    float falloff = hit.distance / radius;
+                    float falloff = Mathf.Clamp01(1 - (hit.distance / radius));
                     damagable.Damage(falloff * rayDamage);
                 }
             }

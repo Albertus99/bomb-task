@@ -6,19 +6,18 @@ public class RunnerCharacter : MovingCharacter
     [SerializeField] private float baseInterval = 3;
     [SerializeField] private float moveRadius = 5;
     
+    
     private Vector3 targetPosition;
     private float lastDecision = float.MinValue;
     private float nextInterval = 0;
     
     protected override void OnIterate()
     {
+        base.OnIterate();
+        
         DecideTargetPosition();
 
-        var moveVector = targetPosition - transform.position;
-        moveVector.y = 0;
-        var speedMoveVector = moveVector.normalized * 0.05f;
-
-        Controller.Move(moveVector.magnitude > speedMoveVector.magnitude ? speedMoveVector : moveVector);
+        MoveTo(targetPosition);
         
     }
 

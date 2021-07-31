@@ -1,17 +1,20 @@
 using System;
 using UnityEngine;
 
-public abstract class Character : MonoBehaviour, IDamagable
+public abstract class Character : MonoBehaviour, IHaveHealth
 {
-    private float health;
-    public bool Dead => health <= 0;
-    public float Health => health;
+    public bool Dead => Health.Value <= 0;
+    public ObservableData<float> Health { get; private set; }
+    public float BaseHealth { get; private set; }
 
     [SerializeField] private float baseHealth = 100;
-    
+    private ObserveDataToken<float> healthDataToken;
+
     private void Start()
     {
-        health = baseHealth;
+        Health = new ObservableData<float>(out healthDataToken);
+        BaseHealth = baseHealth;
+        healthDataToken.Set(baseHealth);
     }
 
     private void FixedUpdate()
@@ -28,8 +31,7 @@ public abstract class Character : MonoBehaviour, IDamagable
     {
         if(Dead) return;
         
-        health -= damage;
-
+        healthDataToken.Set(Health.Value - damage);
         if (Dead)
         {
             Destroy(gameObject);

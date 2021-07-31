@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public abstract class CommonExplosive : Explosive, IDamagable
+public abstract class CommonExplosive : Explosive, IDamagable //common explosives implement IDamagable so detonation can cause chain reaction
 {
 
     [SerializeField] private Explosion explosion;

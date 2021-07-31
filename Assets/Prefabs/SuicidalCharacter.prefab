@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 1639493522629590315}
   - component: {fileID: 1639493522629590312}
   - component: {fileID: 1639493522629590313}
-  - component: {fileID: 150013784421039030}
+  - component: {fileID: 833167083293251745}
   m_Layer: 7
-  m_Name: RunnerCharacter
+  m_Name: SuicidalCharacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   m_LocalPosition: {x: 2.01, y: -1.57, z: 4.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4967827615614401217}
+  - {fileID: 1185285412981200560}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4cc080194398a054d86e90220830e381, type: 2}
+  - {fileID: 2100000, guid: 45392cec3ae027e40855f7c567cd1788, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -117,7 +117,7 @@ CharacterController:
   m_SkinWidth: 0.02
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &150013784421039030
+--- !u!114 &833167083293251745
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,15 +126,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1639493522629590310}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 110b604fe968a3c49bc36ed58696698e, type: 3}
+  m_Script: {fileID: 11500000, guid: a2c069bbe3c90ab439ab84639d05cc77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   baseHealth: 100
   controller: {fileID: 1639493522629590313}
-  moveSpeed: 8
-  baseInterval: 1.2
-  moveRadius: 7
---- !u!1001 &6836253520217329461
+  moveSpeed: 5
+--- !u!1001 &746751410715059012
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -192,11 +190,11 @@ PrefabInstance:
     - target: {fileID: 6527306549781732687, guid: 43a495ae7074e8b47b13dc4e7bbf2406, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 150013784421039030}
+      objectReference: {fileID: 833167083293251745}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43a495ae7074e8b47b13dc4e7bbf2406, type: 3}
---- !u!4 &4967827615614401217 stripped
+--- !u!4 &1185285412981200560 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1886450508089210356, guid: 43a495ae7074e8b47b13dc4e7bbf2406, type: 3}
-  m_PrefabInstance: {fileID: 6836253520217329461}
+  m_PrefabInstance: {fileID: 746751410715059012}
   m_PrefabAsset: {fileID: 0}
